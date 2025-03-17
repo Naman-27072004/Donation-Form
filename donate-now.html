@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Braj Raj Gau Sewa Charitable Trust </title>
+    <link rel="icon" type="image/x-icon" href="./images/cow.ico">
+    <link rel="stylesheet" href="donate-now.css">
+</head>
+
+<body>
+    <img src="./images/Donation.png" alt="Donation" class="donation-image" loading="eager">
+    <h2>Donation Form</h2>
+    <p>Thank you for your generous support.</p>
+
+    <form id="donation-form" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" pattern="^[A-Za-z]+(?:[\s'-][A-Za-z]+)*$" placeholder="Your Name"
+            required autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" maxlength="10" pattern="^[6-9]\d{9}$"
+            placeholder="Your 10-digit Phone Number" required autocomplete="tel">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+
+        <label>Donation Type</label>
+        <div id="donation-options">
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="one-gaj-land" value="5100">
+                <label for="one-gaj-land">One Gaj of Land - ₹5100</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="five-gaj-land" value="25000">
+                <label for="five-gaj-land">Five Gaj of Land - ₹25000</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="one-thousand-bricks" value="7100">
+                <label for="one-thousand-bricks">One Thousand Bricks - ₹7100</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="one-trolley-bajri" value="3500">
+                <label for="one-trolley-bajri">One Trolley of Bajri - ₹3500</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="one-sack-cement" value="350">
+                <label for="one-sack-cement">One Sack of Cement - ₹350</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="ten-sacks-cement" value="4500">
+                <label for="ten-sacks-cement">Ten Sacks of Cement - ₹4500</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation-checkbox" id="one-tin-roof" value="21000">
+                <label for="one-tin-roof">One Tin Roof - ₹21000</label>
+            </div>
+        </div>
+
+        <label for="total-amount">Total Donation Amount (INR)</label>
+        <input type="number" id="total-amount" name="total-amount" step="0.01" min="1" placeholder="Total Amount"
+            readonly>
+
+        <label for="payment-method">Payment Method</label>
+        <select name="payment-method" id="payment-method" required>
+            <option value="" disabled selected>Select an Option</option>
+            <option value="scan-pay">Scan & Pay</option>
+            <option value="upi">UPI</option>
+            <option value="online-transfer">Online Money Transfer</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="donate-now.js"></script>
+</body>
+
+</html>
